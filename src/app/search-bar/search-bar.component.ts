@@ -32,16 +32,13 @@ export class SearchBarComponent implements OnInit {
 
   search(type: string,info: string): void {
     // console.log(this.choice);
-    this.searchService.getResults(type,info).subscribe(data => {
+    this.searchService.getResults(type, info).subscribe(data => {
       console.log(data);
       this.searchResults = data.results;
       console.log(this.searchResults);
     });
   }
 
-  consoleLog(): void{
-    console.log('test');
-  }
   // getResults(typeSearch: string, input: string): void {
   //   this.searchService.getResults(typeSearch, input).subscribe(results => this.results = results);
   // }
