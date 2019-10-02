@@ -1,1 +1,9 @@
-<p>search-bar works!</p>
+<h4>Basic mat-select</h4>
+<mat-form-field>
+  <mat-label>Data For</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

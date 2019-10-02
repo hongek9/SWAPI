@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
+export interface Food {
+  value: string;
+  viewValue: string;
+}
+
+/**
+ * @title Basic select
+ */
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.css']
+  selector: 'select-overview-example',
+  templateUrl: 'select-overview-example.html',
+  styleUrls: ['select-overview-example.css'],
 })
-export class SearchBarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class SelectOverviewExample {
+  foods: Food[] = [
+    {value: 'people-0', viewValue: 'People'},
+    {value: 'ships-1', viewValue: 'Ships'},
+    {value: 'films-2', viewValue: 'Films'}
+  ];
 }
