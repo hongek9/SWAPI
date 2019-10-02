@@ -1,1 +1,21 @@
-<p>search-bar works!</p>
+<form class="example-form">
+  <mat-form-field>
+      <mat-label>Select Search</mat-label>
+      <mat-select #select class="select-text" (change)="consoleLog()">
+        <mat-option #type *ngFor="let choice of choices" ([choice]) = "choice.value"[value]="choice.value">
+          {{choice.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input #input  matInput placeholder="Search">
+  </mat-form-field>
+  <button mat-button class="button" (click)="search(select.value,input.value)">Search</button>
+</form>
+
+
+<div *ngFor="let result of searchResults">
+  <h2>{{result.name}}</h2>
+  <h2>{{result.model}}</h2>
+  <h2>{{result.title}}</h2>
+</div>
