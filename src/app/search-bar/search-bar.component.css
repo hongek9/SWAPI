@@ -16,3 +16,14 @@
 .button {
   background-color: white;
 }
+
+/* .nav {
+  width: 100vw;
+  height: 10vh;
+  background-color:navy;
+} */
+
+.card{
+  width: 20vw;
+  background-color:pink;
+}

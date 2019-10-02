@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Result } from './results';
+import { Result } from './result';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { catchError, map, tap } from 'rxjs/operators';
@@ -23,7 +23,7 @@ export class SearchService {
     private http: HttpClient
   ) { }
 
-  getResults(type: string,info: string): Observable<Result[]> {
+  getResults(type: string, info: string): Observable<Result[]> {
     return this.http.get<Result[]>(`https://swapi.co/api/${type}/?search=${info}`);
 
   }

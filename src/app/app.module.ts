@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { DataDisplayComponent } from './data-display/data-display.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material-module';
 
@@ -24,7 +23,6 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
   declarations: [
     AppComponent,
     SearchBarComponent,
-    DataDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +37,9 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
     DemoMaterialModule,
     HttpClientModule
   ],
-  entryComponents: [DataDisplayComponent],
+  entryComponents: [],
   providers: [],
-  bootstrap: [AppComponent, DataDisplayComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 

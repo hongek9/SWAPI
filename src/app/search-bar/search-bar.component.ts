@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
 
-import { Result } from '../results';
+import { Result } from '../result';
 
 export interface Choice {
   value: string;
@@ -14,7 +14,7 @@ export interface Choice {
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
-  searchResults: Result[];
+  searchResults: any;
   // choice: string;
 
   choices: Choice[] = [
@@ -30,12 +30,12 @@ export class SearchBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  search(type: string,info: string): void {
+  search(type: string, info: string): void {
     // console.log(this.choice);
     this.searchService.getResults(type, info).subscribe(data => {
       console.log(data);
-      this.searchResults = data.results;
-      console.log(this.searchResults);
+      this.searchResults = data;
+      console.log(this.searchResults.results);
     });
   }
 
