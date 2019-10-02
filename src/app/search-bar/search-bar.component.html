@@ -1,7 +1,7 @@
 <form class="example-form">
   <mat-form-field>
       <mat-label>Select Search</mat-label>
-      <mat-select #select class="select-text" (change)="consoleLog()">
+      <mat-select #select class="select-text" (selectionChange)="consoleLog()">
         <mat-option #type *ngFor="let choice of choices" ([choice]) = "choice.value"[value]="choice.value">
           {{choice.viewValue}}
         </mat-option>
