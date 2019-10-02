@@ -1,9 +1,22 @@
 .mat-toolbar {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
-  align-items: center;
 }
-.input{
-  border-block: 2px;
+.mat-toolbar mat-menu{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.mat-toolbar searchField{
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
 }
