@@ -1,0 +1,35 @@
+.nav {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.root {
+  background-image: url("../../assets/stars.jpg");
+  background-size: cover;
+  color: yellow;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 50%;
+}
+.select-text {
+  color: black;
+}
+.button {
+  background-color: white;
+}
+.searchResults{
+  background-image: url("../../assets/stars.jpg");
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.card{
+  width: 20vw;
+  background-color: transparent;
+  color: yellow;
+}
