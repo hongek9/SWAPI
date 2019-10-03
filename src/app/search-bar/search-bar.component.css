@@ -2,10 +2,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-}
-.root {
   background-image: url("../../assets/stars.jpg");
-  background-size: cover;
   color: yellow;
 }
 .example-form {
@@ -17,7 +14,7 @@
   width: 50%;
 }
 .select-text {
-  color: black;
+  color: yellow;
 }
 .button {
   background-color: white;
@@ -27,9 +24,5 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-}
-.card{
-  width: 20vw;
-  background-color: transparent;
   color: yellow;
 }
