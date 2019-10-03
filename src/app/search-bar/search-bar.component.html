@@ -1,1 +1,55 @@
-<p>search-bar works!</p>
+<div class="nav">
+  <h1>The Force is Strong</h1>
+</div>
+<div class="searchField">
+<form class="example-form">
+  <mat-form-field>
+    <mat-label>Pick you must</mat-label>
+    <mat-select #select class="select-text">
+      <mat-option #type *ngFor="let choice of choices" ([choice])="choice.value" [value]="choice.value">
+        {{choice.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input #input matInput placeholder="Search">
+  </mat-form-field>
+  <br>
+  <button mat-button class="button" (click)="search(select.value,input.value)">Search</button>
+</form>
+</div>
+<div *ngIf="searchResults" class="searchResults">
+  <div *ngIf="select.value == 'people'">
+    <div *ngFor="let result of searchResults.results">
+          <h1>{{result.name}}</h1>
+          <h2>Know, people details you must. Yesssssss</h2>
+          <h3>gender: {{result.gender}}</h3>
+          <h4>height: {{result.height}} cm</h4>
+          <h5>Weight: {{result.mass}} kg</h5>
+      <br>
+    </div>
+  </div>
+
+  <div *ngIf="select.value == 'starships'">
+    <div *ngFor="let result of searchResults.results">
+          <h1>{{result.name}}</h1>
+          <h2>Know, ship details you must. Heeeee heeee heeee</h2>
+          <h3>hyperdrive rating: {{result.hyperdrive_rating}}</h3>
+          <h4>cost: {{result.cost_in_credits}} credits</h4>
+          <h5>cargo capacity: {{result.cargo_capacity}} kg</h5>
+      <br>
+    </div>
+  </div>
+
+  <div *ngIf="select.value == 'films'">
+    <div *ngFor="let result of searchResults.results">
+          <h1>{{result.title}}</h1>
+          <h3>Know, movie details you must</h3>
+          <h4>Director: {{result.director}}</h4>
+          <h5>Producer: {{result.producer}}</h5>
+          <h6>Episode Number: {{result.episode_id}}</h6>
+      <br>
+    </div>
+  </div>
+</div>
