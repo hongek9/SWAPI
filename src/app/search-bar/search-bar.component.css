@@ -26,4 +26,5 @@
 .card{
   width: 20vw;
   background-color:pink;
+  display: grid;
 }
