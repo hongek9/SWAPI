@@ -5,6 +5,11 @@
   background-image: url("../../assets/stars.jpg");
   color: yellow;
   font-family: 'Poller One', cursive;
+  padding: 5px;
+}
+.searchField{
+  background-image: url("../../assets/stormTrooper.jpg");
+  padding: 5px;
 }
 .example-form {
   min-width: 150px;
@@ -18,7 +23,7 @@
   color: yellow;
 }
 .button {
-  background-color: white;
+  background-color: transparent;
 }
 .searchResults{
   background-image: url("../../assets/stars.jpg");
@@ -27,4 +32,5 @@
   text-align: center;
   color: yellow;
   font-family: 'Poller One', cursive;
+  padding: 5px;
 }
