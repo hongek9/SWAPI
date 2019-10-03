@@ -4,6 +4,7 @@
   text-align: center;
   background-image: url("../../assets/stars.jpg");
   color: yellow;
+  font-family: 'Poller One', cursive;
 }
 .example-form {
   min-width: 150px;
@@ -25,4 +26,5 @@
   justify-content: center;
   text-align: center;
   color: yellow;
+  font-family: 'Poller One', cursive;
 }
