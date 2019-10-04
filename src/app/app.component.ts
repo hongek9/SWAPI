@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'swapi-red-badge';
+  title:any = 'swapi-red-badge';
 }
+

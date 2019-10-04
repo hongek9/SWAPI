@@ -1,4 +1,12 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../search.service';
+
+import { Result } from '../results';
+
+export interface Choice {
+  value: string;
+  viewValue: string;
+}
 
 export interface Food {
   value: string;
@@ -9,14 +17,41 @@ export interface Food {
  * @title Basic select
  */
 @Component({
-  selector: 'select-overview-example',
-  templateUrl: 'select-overview-example.html',
-  styleUrls: ['select-overview-example.css'],
+  selector: 'app-search-bar',
+  templateUrl: './search-bar.component.html',
+  styleUrls: ['./search-bar.component.css'],
 })
-export class SelectOverviewExample {
-  foods: Food[] = [
-    {value: 'people-0', viewValue: 'People'},
-    {value: 'ships-1', viewValue: 'Ships'},
-    {value: 'films-2', viewValue: 'Films'}
+export class SearchBarComponent implements OnInit {
+  searchResults: Result[];
+  // choice: string;
+
+  choices: Choice[] = [
+    {value: 'people', viewValue: 'People'},
+    {value: 'starships', viewValue: 'Ships'},
+    {value: 'films', viewValue: 'Films'}
   ];
+
+
+
+  constructor(private searchService: SearchService) { }
+
+  ngOnInit() {
+  }
+
+  search(type: string,info: string): void {
+    // console.log(this.choice);
+    this.searchService.getResults(type,info).subscribe(data => {
+      console.log(data);
+      this.searchResults = data.results;
+      console.log(this.searchResults);
+    });
+  }
+
+  consoleLog(): void{
+    console.log('test');
+  }
+  // getResults(typeSearch: string, input: string): void {
+  //   this.searchService.getResults(typeSearch, input).subscribe(results => this.results = results);
+  // }
+
 }
